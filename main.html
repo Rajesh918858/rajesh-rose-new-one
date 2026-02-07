@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio autoplay loop style="display: none;">
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="bg-hearts" id="heart-container"></div>
+    <div class="card">
+        <div id="page1" class="page active">
+            <h1>Happy Rose Day Baby</h1>
+            <img src="image.png" alt="Cute Rose Bear" class="hero-img">
+            <p>A rose for the person who makes my world more beautiful just by being in it 🌹</p>
+            <button class="btn" onclick="nextPage(2)">Open Memories</button>
+        </div>
+        <div id="page2" class="page">
+            <h1>Our Love Moments</h1>
+            <div class="gallery-grid">
+                <img src="https://placehold.co/100/pink/white" class="gallery-img" style="--r: -5deg">
+                <img src="https://placehold.co/100/pink/white" class="gallery-img" style="--r: 3deg">
+                <img src="https://placehold.co/100/pink/white" class="gallery-img" style="--r: -2deg">
+                <img src="https://placehold.co/100/pink/white" class="gallery-img" style="--r: 4deg">
+                <img src="https://placehold.co/100/pink/white" class="gallery-img" style="--r: -3deg">
+                <img src="https://placehold.co/100/pink/white" class="gallery-img" style="--r: 5deg">
+            </div>
+            <button class="btn" onclick="nextPage(3)">Pick a Gift</button>
+        </div>
+        <div id="page3" class="page">
+            <h1>Pick a Rose</h1>
+            <p>One of these roses holds a secret message...</p>
+            <div class="rose-container">
+                <button class="rose-btn" onclick="showRoseMessage('This one is pretty, but try another')">🌹</button>
+                <button class="rose-btn" onclick="showRoseMessageAndNavigate('You found it! Opening the letter', 5)">🌹</button>
+                <button class="rose-btn" onclick="showRoseMessage('This one is pretty, but try another')">🌹</button>
+            </div>
+        </div>
+        <div id="page4" class="page">
+            <h1>From My Heart</h1>
+            <div class="paper">
+                <p><strong>My Dearest,</strong></p>
+                <p>Just like a rose, your love fills my life with fragrance and color. On this special day, I want to tell you that you are my most precious treasure.</p>
+                <p>I promise to keep our love blooming forever.</p>
+                <p style="text-align: right; color: #d6336c;"><strong>Always Yours ❤️</strong></p>
+            </div>
+            <button class="btn" onclick="nextPage(5)">One Final Note</button>
+        </div>
+        <div id="page5" class="page">
+            <h1>I Love You</h1>
+            <img src="page 5.gif" alt="Cute Rose Bear" class="hero-img">
+            <p>Thank you for being my constant bloom. Wishing you a day as beautiful as your smile.</p>
+            <button class="btn" onclick="location.reload()">Happy Rose Day Once Again 🌹</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
